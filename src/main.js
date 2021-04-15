@@ -3,4 +3,18 @@ import 'virtual:windi.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+import { createRouter, createWebHistory } from 'vue-router'
+import routes from 'virtual:generated-pages'
+
+console.log(routes)
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+})
+
+const app = createApp(App)
+
+app.use(router)
+
+app.mount('#app')
