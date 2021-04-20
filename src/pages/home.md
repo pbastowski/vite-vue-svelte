@@ -8,3 +8,7 @@ Well, isn't this sweet now :)
   meta: {requiresAuth: false}
 }
 </route>
+
+<my-s1 />
+
+<router-view />
