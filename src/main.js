@@ -6,7 +6,7 @@ import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'virtual:generated-pages'
 
-import './s01.wc.svelte'
+import './app/s01.wc.svelte'
 
 console.log(routes)
 
