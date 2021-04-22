@@ -16,6 +16,7 @@
         "sass": "1.32.11",
         "vite": "2.2.1",
         "vite-plugin-components": "0.8.4",
+        "vite-plugin-live-reload": "2.1.0",
         "vite-plugin-md": "0.6.3",
         "vite-plugin-pages": "0.9.5",
         "vite-plugin-voie": "0.7.3",
