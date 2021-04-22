@@ -13,15 +13,15 @@
 </slot>
 
 <slot>
-    {#each todos as item}
+    {#each todos as item, index}
         <li on:click={e=>{
             todos=todos.filter(i=>i!==item)
             dispatch('update', todos)
-        }} >{item}</li>
+        }} >{item} - {index}</li>
     {/each}
-    <pre>{todos}</pre>
+    <pre>SVELTE: {todos}</pre>
 </slot>
 
 <hr>
-<pre>{JSON.stringify($$props)}</pre>
+SVELTE: $$props: <pre>{JSON.stringify($$props)}</pre>
 <hr>

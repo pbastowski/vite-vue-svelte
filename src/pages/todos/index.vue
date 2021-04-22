@@ -1,7 +1,7 @@
 <template>
     <my-todos :todos="todos" @update="console.log('EV:', $event)" />
     <hr />
-    <pre>{{ todos }}</pre>
+    <pre>VUE: {{ todos }}</pre>
 </template>
 
 <script setup>
