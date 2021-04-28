@@ -1,4 +1,11 @@
-<svelte:options tag="my-s1" />
+<svelte:options tag="app-header" />
 
-<h1>This is a svelte component</h1>
+<nav>
+    <a href="javascript:" on:click on:click={()=>dispatch('navigate', { to: '/todos'})} class="">todos</a>
+</nav>
+
+<script>
+    import { createEventDispatcher} from 'svelte'
+    const dispatch = createEventDispatcher()
+</script>
 

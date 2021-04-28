@@ -1,6 +1,7 @@
 <svelte:options tag="my-todos" />
 
 <script>
+    console.log('! todos.wc')
     export let todos = []
     import { createEventDispatcher } from 'svelte';
 

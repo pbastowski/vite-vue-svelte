@@ -11,15 +11,15 @@
     },
     "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "1.0.0-next.7",
-        "@vitejs/plugin-vue": "1.2.1",
+        "@vitejs/plugin-vue": "1.2.2",
         "@vue/compiler-sfc": "3.0.11",
         "sass": "1.32.11",
-        "vite": "2.2.1",
+        "vite": "2.2.3",
         "vite-plugin-components": "0.8.4",
         "vite-plugin-live-reload": "2.1.0",
         "vite-plugin-md": "0.6.3",
-        "vite-plugin-pages": "0.9.5",
+        "vite-plugin-pages": "0.9.8",
         "vite-plugin-voie": "0.7.3",
-        "vite-plugin-windicss": "0.14.6"
+        "vite-plugin-windicss": "0.15.7"
     }
 }

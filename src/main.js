@@ -1,7 +1,7 @@
 import 'virtual:windi.css'
 
 import { createApp } from 'vue'
-import App from './App.vue'
+import Layout from './layout.vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'virtual:generated-pages'
@@ -15,8 +15,12 @@ const router = createRouter({
     routes,
 })
 
-const app = createApp(App)
+const app = createApp(Layout)
+
+app.provide('log', console.log.bind(console))
 
 app.use(router)
 
 app.mount('#app')
+
+console.log('! MAIN')

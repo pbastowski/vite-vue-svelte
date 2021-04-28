@@ -7,4 +7,5 @@
 <script setup>
     import './todos.wc.svelte'
     const todos = ['one', 'two']
+    console.log('! todos/index')
 </script>
