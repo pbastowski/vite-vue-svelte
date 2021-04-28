@@ -49,14 +49,13 @@ module.exports = defineConfig(({ command, mode }) => {
                 preflight: false, // turn off the CSS resets
             }),
 
-            // Allow normal svelte components as well a svelte custome elements
+            // Allow normal svelte components as well a svelte custom elements
             svelte({
                 compilerOptions: { customElement: true },
                 include: /\.wc\.svelte$/,
             }),
             svelte({
                 compilerOptions: { customElement: false },
-                include: /\\.svelte$/,
                 exclude: /\.wc\.svelte$/,
             }),
 
