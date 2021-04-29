@@ -9,5 +9,13 @@
     "jsxBracketSameLine": false,
     "fluid": false,
     "vueIndentScriptAndStyle": true,
-    "arrowParens": "avoid"
+    "arrowParens": "avoid",
+    "overrides": [
+        {
+            "files": "*.svelte",
+            "options": {
+                "parser": "html"
+            }
+        }
+    ]
 }

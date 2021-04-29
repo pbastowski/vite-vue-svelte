@@ -6,6 +6,11 @@
 
 <script setup>
     import './todos.wc.svelte'
-    const todos = ['one', 'two']
+    const todos = [
+        { title: 'Item 1' },
+        { title: 'Another Item' },
+        { title: 'Robot 3' },
+    ]
+
     console.log('! todos/index')
 </script>

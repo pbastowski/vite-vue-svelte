@@ -7,12 +7,14 @@
         "serve": "vite preview"
     },
     "dependencies": {
-        "vue": "3.0.11"
+        "vue": "3.0.11",
+        "yrv": "0.0.38"
     },
     "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "1.0.0-next.7",
         "@vitejs/plugin-vue": "1.2.2",
         "@vue/compiler-sfc": "3.0.11",
+        "prettier-plugin-svelte": "2.2.0",
         "sass": "1.32.11",
         "vite": "2.2.3",
         "vite-plugin-components": "0.8.4",
