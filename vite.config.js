@@ -59,7 +59,8 @@ module.exports = defineConfig(({ command, mode }) => {
                 exclude: /\.wc\.svelte$/,
             }),
 
-            LiveReload('**/*.wc.svelte'), // needed to reload the page after a customElement is updated
+            LiveReload('**/*.svelte'), // needed to reload the page after a customElement is updated
+            // LiveReload('**/*.wc.svelte'), // needed to reload the page after a customElement is updated
         ],
 
         build: {
