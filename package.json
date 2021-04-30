@@ -22,6 +22,6 @@
         "vite-plugin-md": "0.6.3",
         "vite-plugin-pages": "0.10.0",
         "vite-plugin-voie": "0.7.3",
-        "vite-plugin-windicss": "0.15.7"
+        "vite-plugin-windicss": "0.15.9"
     }
 }
