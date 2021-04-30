@@ -19,7 +19,7 @@
 </script>
 
 {#each filteredList as item}
-	<Link href="/{item.title}">
+	<Link href="/todos/{item.title}">
 		<li on:click={()=> dispatch('click', item) }>{item.title}</li>
 	</Link>
 {/each}

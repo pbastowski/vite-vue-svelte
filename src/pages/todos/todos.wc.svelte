@@ -36,7 +36,7 @@
                 <List bind:list={list} {search} on:click="{e => item = e.detail}" />
             </Route>
             <Route fallback>Not found</Route>
-            <Route exact path="/:item" let:router>
+            <Route path="/:item" let:router>
                 <Item bind:item />
             </Route>
         </Router>
