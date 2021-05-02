@@ -1,27 +1,17 @@
 <script>
-  import { Link } from 'yrv';
+    import { createEventDispatcher } from 'svelte'
 
-	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher()
 
-	export let list //= []
-	export let search = ''
-
-	console.log('LIST: search', search)
-
-	// let filteredList = $list
-	let searchText = search.toLowerCase()
-
-	$: filteredList = $list.filter(item => item.title.toLowerCase().includes(search))
-
-
-
+    export let todos
 </script>
 
-{#each filteredList as item}
-	<Link href="/todos/{item.title}">
-		<li on:click={()=> dispatch('click', item) }>{item.title}</li>
-	</Link>
+{#each todos as item, index}
+    <li
+        on:click={e => {
+            dispatch('update', item)
+        }}
+    >
+        {item.title}
+    </li>
 {/each}
-
-<!-- 	<li on:click={()=> dispatch('click', item) }>{item}</li> -->
