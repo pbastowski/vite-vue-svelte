@@ -12,7 +12,8 @@ module.exports = defineConfig(({ command, mode }) => {
     return {
         plugins: [
             Vue({
-                include: [/\.vue$/, /\.md$/], // <--
+                // MD files are also converted into Vue components
+                include: [/\.vue$/, /\.md$/],
 
                 // Prevent Vue from throwing messages about unregistered custom elements
                 template: {
@@ -29,7 +30,7 @@ module.exports = defineConfig(({ command, mode }) => {
                 dirs: ['src/components'],
 
                 // allow auto load markdown components under `./src/components/`
-                extensions: ['vue', 'md', 'svelte'],
+                extensions: ['vue', 'md'],
 
                 // allow auto import and register components used in markdown
                 customLoaderMatcher: path => path.endsWith('.md'),
@@ -59,8 +60,8 @@ module.exports = defineConfig(({ command, mode }) => {
                 exclude: /\.wc\.svelte$/,
             }),
 
-            LiveReload('**/*.svelte'), // needed to reload the page after a customElement is updated
-            // LiveReload('**/*.wc.svelte'), // needed to reload the page after a customElement is updated
+            // needed to reload the page after a customElement is updated
+            LiveReload('**/*.svelte'),
         ],
 
         build: {
