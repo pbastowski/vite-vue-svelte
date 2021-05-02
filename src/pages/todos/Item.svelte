@@ -12,7 +12,6 @@
     Edit Item
 </h3>
 
-
 <label>item: <input
     bind:value={item.title}
     on:keyup={e => {
