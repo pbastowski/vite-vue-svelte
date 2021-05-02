@@ -1,50 +1,30 @@
 <svelte:options tag="my-todos" />
 
 <script>
-    import { Router, Route, Link } from 'yrv'
+    console.log('! todos.wc')
 
+    import { createEventDispatcher } from 'svelte'
+
+    const dispatch = createEventDispatcher()
     import List from './List.svelte'
-    import Item from './Item.svelte'
-    import Search from './Search.svelte'
-
-    import { writable } from 'svelte/store'
 
     export let todos = []
-    $: list = writable(todos)
 
-    let item   = {}
-    let search = ''
-
+    export let updateTodos = () => {}
 </script>
 
-
 <slot name="head">
-    <h1>TODOS</h1>
+    <h2>TODOS</h2>
 </slot>
 
 <slot>
-    <Link href="/">Home</Link>
-    |
-    <Link href="/not/found">NotFound</Link>
-
-    <p>
-        <Search {search} on:search={e=>search=e.detail} />
-    </p>
-    <p>
-        <Router path="/todos">
-            <Route exact>
-                <List bind:list={list} {search} on:click="{e => item = e.detail}" />
-            </Route>
-            <Route fallback>Not found</Route>
-            <Route path="/:item" let:router>
-                <Item bind:item />
-            </Route>
-        </Router>
-    </p>
-
+    <List
+        bind:todos
+        on:update={e => {
+            console.log('UPDATE:', e.detail)
+            todos = todos.filter(i => i !== e.detail)
+            updateTodos(todos)
+            dispatch('update', todos)
+        }}
+    />
 </slot>
-
-<hr>
-SVELTE: $$props:
-<pre>{JSON.stringify($$props)}</pre>
-<hr>
