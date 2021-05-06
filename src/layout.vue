@@ -10,7 +10,7 @@
     </app-header>
     <router-view />
     <hr />
-    <h4>STORE</h4>
+    <h4>Vue STORE</h4>
     <pre>{{ $store }}</pre>
 </template>
 

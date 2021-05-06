@@ -9,8 +9,13 @@
 </script>
 
 <slot name="head">
-    <h2>TODOS</h2>
+    <h1>TODOS - Svelte</h1>
 </slot>
+
+<p>
+    Try deleting the items below by clicking the round (x) and see how they also
+    disappear from the Vue side store.
+</p>
 
 <slot>
     <List
