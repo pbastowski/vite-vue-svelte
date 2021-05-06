@@ -8,7 +8,9 @@
     export let updateTodos = () => {}
 </script>
 
-<div style="background: #F0F0F0; padding: 1px 20px 15px 20px">
+<div
+    style="background: #F0F0F0; padding: 1px 20px 15px 20px; border-radius: 10px;"
+>
     <h3>TODOS - Svelte component</h3>
 
     <p>
