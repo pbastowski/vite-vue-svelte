@@ -6,23 +6,12 @@
         that wraps the Svelte todos mini feature
     </p>
 
-    <my-todos
-        :todos="$store.todos"
-        @update="console.log('EV:', $event)"
-        :updateTodos="updateTodos"
-    />
+    <my-todos :todos="$store.todos" @update="$store.todos = $event.detail" />
 </template>
 
-<script>
+<script setup>
     import './todos.wc.svelte'
+    import { inject } from 'vue'
 
-    export default {
-        inject: ['$store'],
-
-        methods: {
-            updateTodos(newTodos) {
-                this.$store.todos = newTodos
-            },
-        },
-    }
+    const $store = inject('$store')
 </script>
