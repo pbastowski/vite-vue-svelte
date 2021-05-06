@@ -1,4 +1,11 @@
 <template>
+    <h1>TODOS - Vue wrapper</h1>
+
+    <p>
+        * This is the Vue wrapper page, which hosts the Svelte custom element
+        that wraps the Svelte todos mini feature
+    </p>
+
     <my-todos
         :todos="$store.todos"
         @update="console.log('EV:', $event)"

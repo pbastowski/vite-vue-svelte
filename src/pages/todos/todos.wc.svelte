@@ -8,21 +8,21 @@
     export let updateTodos = () => {}
 </script>
 
-<slot name="head">
-    <h1>TODOS - Svelte</h1>
-</slot>
+<div style="background: #F0F0F0; padding: 1px 20px 15px 20px">
+    <h3>TODOS - Svelte component</h3>
 
-<p>
-    Try deleting the items below by clicking the round (x) and see how they also
-    disappear from the Vue side store.
-</p>
+    <p>
+        Try deleting the items below by clicking the round (x) and see how they
+        also disappear from the Vue side store.
+    </p>
 
-<slot>
-    <List
-        bind:todos
-        on:update={e => {
-            todos = todos.filter(i => i !== e.detail)
-            updateTodos(todos)
-        }}
-    />
-</slot>
+    <slot>
+        <List
+            bind:todos
+            on:update={e => {
+                todos = todos.filter(i => i !== e.detail)
+                updateTodos(todos)
+            }}
+        />
+    </slot>
+</div>
