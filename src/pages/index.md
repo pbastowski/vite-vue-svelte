@@ -1,4 +1,3 @@
-# This is INDEX in md
+# This is the app home page
 
-Bring it on!
-
+<router-view />

@@ -1,12 +1,10 @@
 import 'virtual:windi.css'
 
-import { createApp } from 'vue'
+import { createApp, reactive, watchEffect } from 'vue'
 import Layout from './layout.vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'virtual:generated-pages'
-
-import './app/s01.wc.svelte'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -15,10 +13,16 @@ const router = createRouter({
 
 const app = createApp(Layout)
 
-app.provide('log', console.log.bind(console))
+// Providers
+app.provide('log', console.log.bind(console)) // expose log to the templates. usage: const log = inject('log')
+app.provide('$router', router) // expose log to the templates. usage: const log = inject('log')
 
+// Stores
+import store from './store.js'
+console.log(JSON.stringify(store))
+app.provide('$store', store)
+
+// Router
 app.use(router)
 
 app.mount('#app')
-
-console.log('! MAIN')
