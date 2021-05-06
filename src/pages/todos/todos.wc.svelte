@@ -6,14 +6,8 @@
 
     export let todos = []
 
-    export let updateTodos = () => {}
-
     let component
-
-    $: console.log('COMPONENT:', component)
 </script>
-
-<!--<svelte:component bind:this={component}/>-->
 
 <div
     bind:this={component}
@@ -31,7 +25,6 @@
             bind:todos
             on:update={e => {
                 todos = todos.filter(i => i !== e.detail)
-                updateTodos(todos)
                 dispatchEvent(component, 'update', todos)
             }}
         />
