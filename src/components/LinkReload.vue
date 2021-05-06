@@ -12,7 +12,6 @@
         methods: {
             reload() {
                 window.localStorage.persist = this.persist && '1'
-                console.log('REALOADLINK:', this.persist)
             },
         },
     }
