@@ -1,7 +1,7 @@
 /**
  * Dispatches an event that bubles up from within a custom element.
  *
- * @param {htmlElement} el
+ * @param {HTMLElement} el
  * @param {String} event Name of the event that you wish to dispatch
  * @param {Object} detail The event payload
  */
