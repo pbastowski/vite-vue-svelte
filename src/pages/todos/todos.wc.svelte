@@ -16,8 +16,8 @@
     <h3>TODOS - Svelte component</h3>
 
     <p>
-        Try deleting the items below by clicking the round (x) and see how they
-        also disappear from the Vue side store.
+        Try deleting the items below by clicking the round (x) and notice how
+        they also disappear from the Vue side store.
     </p>
 
     <slot>

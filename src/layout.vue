@@ -8,6 +8,8 @@
         &nbsp;
         <link-reload to="/">HOME reload</link-reload>
         &nbsp; | &nbsp;
+        <link-reload to="/" persist>HOME reload persist</link-reload>
+        &nbsp;
         <link-reload to="/todos" persist>TODOS reload persist</link-reload>
     </app-header>
 
@@ -16,9 +18,12 @@
     <router-view />
     <hr />
 
-    <h4>Vue STORE</h4>
+    <h3>VUE store</h3>
 
-    <p>Below are shown the contents of the Vue store in real-time.</p>
+    <p>
+        Shown below is the contents of the Vue store, including any updates in
+        real-time.
+    </p>
 
     <pre>{{ $store }}</pre>
 </template>
