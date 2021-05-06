@@ -19,7 +19,6 @@ app.provide('$router', router) // expose log to the templates. usage: const log 
 
 // Stores
 import store from './store.js'
-console.log(JSON.stringify(store))
 app.provide('$store', store)
 
 // Router
