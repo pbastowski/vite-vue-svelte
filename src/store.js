@@ -17,9 +17,9 @@ if (persist && window.localStorage.todos !== '') {
 // ... or set some default data
 else
     store.todos = [
-        { title: 'Item 1' },
-        { title: 'Another Item' },
-        { title: 'Robot 3' },
+        { title: 'Buy Milk' },
+        { title: 'Take milk allergy pills' },
+        { title: 'Go for a long walk' },
     ]
 
 // Watch for changes to todos and then sve them to localStorage
